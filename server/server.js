@@ -29,7 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-app.use(express.static(path.join(__dirname, '/../client')));
+app.use(express.static(path.join(__dirname, '../client')));
 
 require('./config/passport.js')(passport);
 require('./App/routes.js')(app, express, passport);

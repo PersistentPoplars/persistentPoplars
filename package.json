@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "start": "babel ./client --out-dir client/compiled --presets=es2015,react --ignore=node_modules,client/compiled,client/lib --source-maps inline --watch & nodemon server/server.js",
+    "start": "webpack -d && node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack -d --watch",
     "build": "webpack -p"
