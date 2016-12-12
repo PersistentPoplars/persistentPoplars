@@ -4,14 +4,19 @@ var Sequelize = require('sequelize');
 var bcrypt = require('bcryptjs');
 var Promise = require('bluebird');
 console.log('database url is: ', process.env.JAWSDB_URL);
-var sequelize = new Sequelize(process.env.JAWSDB_URL, {
-  dialect: 'mysql',
-  pool: {
-    max: 5,
-    min: 0,
-    idle: 300000
-  }
-});
+
+if (process.env.JAWSDB_URL) {
+  var sequelize = new Sequelize(process.env.JAWSDB_URL, {
+    dialect: 'mysql',
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 300000
+    }
+  });
+} else {
+  var sequelize = new Sequelize('persistentPoplar', 'root', '');
+}
 
 //Company table
 var Company = sequelize.define('company', {
