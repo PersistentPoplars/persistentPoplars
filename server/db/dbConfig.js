@@ -3,7 +3,10 @@
 var Sequelize = require('sequelize');
 var bcrypt = require('bcryptjs');
 var Promise = require('bluebird');
-var sequelize = new Sequelize(process.env.CLEARDB_DATABASE_URL);
+var sequelize = new Sequelize(process.env.CLEARDB_DATABASE_URL, {
+  dialect: 'mysql',
+  pool: {}
+});
 
 //Company table
 var Company = sequelize.define('company', {
