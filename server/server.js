@@ -39,6 +39,6 @@ app.use(function (err, req, res, next) {
   res.status(500).send('Oops! Something broke on our end. Please refresh');
 });
 
-
-app.listen(4568);
-console.log('Server started on 4568');
+var port = process.env.PORT || 4568; 
+app.listen(port);
+console.log('app is listening on port: ', port);
