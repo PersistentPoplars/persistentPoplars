@@ -3,8 +3,8 @@
 var Sequelize = require('sequelize');
 var bcrypt = require('bcryptjs');
 var Promise = require('bluebird');
-console.log('database url is: ', process.env.CLEARDB_DATABASE_URL);
-var sequelize = new Sequelize(process.env.CLEARDB_DATABASE_URL, {
+console.log('database url is: ', process.env.JAWSDB_URL);
+var sequelize = new Sequelize(process.env.JAWSDB_URL, {
   dialect: 'mysql',
   pool: {
     max: 5,
