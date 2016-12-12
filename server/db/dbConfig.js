@@ -5,7 +5,11 @@ var bcrypt = require('bcryptjs');
 var Promise = require('bluebird');
 var sequelize = new Sequelize(process.env.CLEARDB_DATABASE_URL, {
   dialect: 'mysql',
-  pool: {}
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 300000
+  }
 });
 
 //Company table
