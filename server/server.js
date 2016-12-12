@@ -31,7 +31,7 @@ app.use(passport.session());
 app.use(express.static(__dirname + '/../client'));
 
 require('./config/passport.js')(passport);
-require('./app/routes.js')(app, express, passport);
+require('./App/routes.js')(app, express, passport);
 
 // Error handling
 app.use(function (err, req, res, next) {

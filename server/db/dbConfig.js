@@ -3,7 +3,7 @@
 var Sequelize = require('sequelize');
 var bcrypt = require('bcryptjs');
 var Promise = require('bluebird');
-var sequelize = new Sequelize('persistentPoplar', 'root', '');
+var sequelize = new Sequelize(process.env.CLEARDB_DATABASE_URL);
 
 //Company table
 var Company = sequelize.define('company', {
