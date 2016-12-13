@@ -5,7 +5,7 @@ var BUILD_DIR = path.resolve(__dirname, 'client/compiled');
 var APP_DIR = path.resolve(__dirname, 'client');
 
 var config = {
-  entry: ['whatwg-fetch', APP_DIR + '/src/index.js'],
+  entry: ['whatwg-fetch', APP_DIR + '/src'],
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js'
