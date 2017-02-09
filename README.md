@@ -4,7 +4,7 @@
 
 Product Owner: Michael Dwyer
 Scrum Master: Nate Graf
-Developement Team Members: Matthew Goldwater, Sam He
+Developement Team Members: Matt Goldwater, Sam He
 
 ##Synopsis
 
