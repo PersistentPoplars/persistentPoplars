@@ -54,11 +54,10 @@ module.exports = function(app, express, passport) {
     console.log(req.body);
     db.Proposal.create(req.body);
   });
-
+  
   app.get('*', function (req, res) {
     res.sendFile(path.resolve(__dirname + '/../../client/index.html'));
   });
-
 
 };
 

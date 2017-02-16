@@ -5,7 +5,7 @@ import auth from './auth.js';
 
 import App from './components/app.jsx';
 import Dashboard from './components/Dashboard.jsx';
-import Login from './components/Login.jsx';
+import Login from './components/login.jsx';
 import NewProposal from './components/NewProposal.jsx';
 import NotFound from './components/NotFound.jsx';
 import ProposalList from './components/ProposalList.jsx';

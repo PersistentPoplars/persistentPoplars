@@ -2,5 +2,4 @@
 node_modules/
 
 ## Compiled files ##
-client/compiled/
 client/lib/bower_components

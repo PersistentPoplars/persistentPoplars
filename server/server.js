@@ -5,6 +5,7 @@ var morgan = require('morgan');
 var passport = require('passport');
 var session = require('express-session');
 var flash = require('connect-flash');
+var path = require('path');
 var db = require('./db/dbConfig');
 
 
@@ -28,10 +29,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-app.use(express.static(__dirname + '/../client'));
+app.use(express.static(path.join(__dirname, '../client')));
 
 require('./config/passport.js')(passport);
-require('./app/routes.js')(app, express, passport);
+require('./App/routes.js')(app, express, passport);
 
 // Error handling
 app.use(function (err, req, res, next) {
@@ -39,6 +40,6 @@ app.use(function (err, req, res, next) {
   res.status(500).send('Oops! Something broke on our end. Please refresh');
 });
 
-
-app.listen(4568);
-console.log('Server started on 4568');
+var port = process.env.PORT || 4568; 
+app.listen(port);
+console.log('app is listening on port: ', port);
